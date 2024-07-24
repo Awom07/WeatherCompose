@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -122,7 +121,7 @@ fun WeatherDetails(data: WeatherModel) {
             Spacer(modifier = Modifier.width(8.dp))
             Text(text = data.location.country, fontSize = 18.sp, color = Color.Gray)
         }
-        Spacer(modifier = Modifier.width(16.dp))
+        Spacer(modifier = Modifier.width(36.dp))
         Text(
             text = "${data.current.temp_c}°C",
             fontSize = 56.sp,
@@ -140,7 +139,7 @@ fun WeatherDetails(data: WeatherModel) {
             textAlign = TextAlign.Center,
             color = Color.Gray
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(26.dp))
         Card {
             Column(modifier = Modifier.fillMaxWidth()) {
                 Row(
@@ -166,12 +165,9 @@ fun WeatherDetails(data: WeatherModel) {
                 }
             }
         }
-        data.forecast?.forecastday?.get(0)?.hour.let {
-
-        }
     }
-
 }
+
 
 @Composable
 fun WeatherKeyVal(key: String, value: String) {
@@ -183,3 +179,4 @@ fun WeatherKeyVal(key: String, value: String) {
         Text(text = key, fontWeight = FontWeight.SemiBold, color = Color.Gray)
     }
 }
+
