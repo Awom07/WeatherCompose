@@ -16,9 +16,8 @@ WeatherApp is an application that shows you the weather according to your locati
 * [Coil](https://coil-kt.github.io/coil/compose/)
 
 ##  Screenshots
+![Screenshot_2024-07-24-21-05-22-553_com example weathercomposeapp](https://github.com/user-attachments/assets/e4dec7ee-5950-4c97-a4ad-1a4f54c1c341)
 
-    <img src="Screenshot_2024-07-24-21-05-22-553_com.example.weathercomposeapp.jpg" width="240" height="480"/>
-    <img src="Screenshot_2024-07-24-21-05-36-196_com.example.weathercomposeapp.jpg" width="240" height="480"/>
 
 ## Project Structure 
 ```
