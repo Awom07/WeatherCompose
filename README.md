@@ -1,6 +1,6 @@
-# Jetpack Compose WeatherApp 🌡
+# Jetpack Compose WeatherApp 
 
-WeatherApp is an application that shows you the weather according to your location. You can find out by searching the weather information of the city you want. You can save the weather of the city you want. If you have an internet connection, the weather conditions of these cities are updated automatically. Weather information is saved on the device.
+WeatherApp is an application that shows you the weather according to your location. You can find out by searching the weather information of the city you want. 
 
 <br/>
 
@@ -15,7 +15,7 @@ WeatherApp is an application that shows you the weather according to your locati
 
 * [Coil](https://coil-kt.github.io/coil/compose/)
 
-## 📱 Screenshots
+##  Screenshots
 
 
 
