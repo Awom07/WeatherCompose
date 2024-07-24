@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -78,23 +79,23 @@ fun WeatherPage(viewModel: WeatherViewModel) {
             }
         }
 
-    }
 
-    when (val result = weatherResult.value) {
-        is NetworkResponse.Error -> {
-            Text(text = result.exception)
-        }
 
-        NetworkResponse.Loading -> {
-            CircularProgressIndicator()
-        }
+        when (val result = weatherResult.value) {
+            is NetworkResponse.Error -> {
+                Text(text = result.exception)
+            }
 
-        is NetworkResponse.Success -> {
-            WeatherDetails(data = result.data)
-        }
+            NetworkResponse.Loading -> {
+                CircularProgressIndicator()
+            }
 
-        null -> {
+            is NetworkResponse.Success -> {
+                WeatherDetails(data = result.data)
+            }
 
+            null -> {
+            }
         }
     }
 }
@@ -130,7 +131,7 @@ fun WeatherDetails(data: WeatherModel) {
         )
         AsyncImage(
             modifier = Modifier.size(160.dp),
-            model = "http:${data.current.condition.icon}".replace("64x64", "128x128"),
+            model = "https://${data.current.condition.icon}".replace("64x64", "128x128"),
             contentDescription = "Condition icon"
         )
         Text(
@@ -140,6 +141,45 @@ fun WeatherDetails(data: WeatherModel) {
             color = Color.Gray
         )
         Spacer(modifier = Modifier.height(16.dp))
+        Card {
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    WeatherKeyVal("Humidity", data.current.humidity.toString())
+                    WeatherKeyVal("Wind Speed", data.current.wind_kph.toString() + " km/h")
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    WeatherKeyVal("UV", data.current.uv.toString())
+                    WeatherKeyVal("Participation", data.current.precip_mm.toString() + " mm")
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    WeatherKeyVal("Local Time", data.location.localtime.split(" ")[1])
+                    WeatherKeyVal("Local Date", data.location.localtime.split(" ")[0])
+                }
+            }
+        }
+        data.forecast?.forecastday?.get(0)?.hour.let {
 
+        }
+    }
+
+}
+
+@Composable
+fun WeatherKeyVal(key: String, value: String) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(text = value, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+        Text(text = key, fontWeight = FontWeight.SemiBold, color = Color.Gray)
     }
 }
