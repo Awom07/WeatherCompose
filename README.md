@@ -17,7 +17,7 @@ WeatherApp is an application that shows you the weather according to your locati
 
 ##  Screenshots
 ![Screenshot_2024-07-24-21-05-22-553_com example weathercomposeapp](https://github.com/user-attachments/assets/e4dec7ee-5950-4c97-a4ad-1a4f54c1c341)
-
+<img scr="https://github.com/user-attachments/assets/e4dec7ee-5950-4c97-a4ad-1a4f54c1c341"/></a>
 
 ## Project Structure 
 ```
