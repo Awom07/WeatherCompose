@@ -17,7 +17,8 @@ WeatherApp is an application that shows you the weather according to your locati
 
 ##  Screenshots
 
-(file:///C:/Users/azoma/Desktop/Screenshot_2024-07-24-21-05-36-196_com.example.weathercomposeapp.jpg)
+    <img src="Screenshot_2024-07-24-21-05-22-553_com.example.weathercomposeapp.jpg" width="240" height="480"/>
+    <img src="Screenshot_2024-07-24-21-05-36-196_com.example.weathercomposeapp.jpg" width="240" height="480"/>
 
 ## Project Structure 
 ```
