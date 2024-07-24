@@ -5,7 +5,7 @@ WeatherApp is an application that shows you the weather according to your locati
 <br/>
 
 ## Api
-* (https://www.weatherapi.com/)
+* [Free Weather API](https://www.weatherapi.com/)
 
 ## Libraries
 
@@ -17,7 +17,7 @@ WeatherApp is an application that shows you the weather according to your locati
 
 ##  Screenshots
 
-
+(file:///C:/Users/azoma/Desktop/Screenshot_2024-07-24-21-05-36-196_com.example.weathercomposeapp.jpg)
 
 ## Project Structure 
 ```
